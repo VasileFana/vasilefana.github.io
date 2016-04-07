@@ -13,7 +13,6 @@ background-color: #0099FF;
   position: absolute;
   top: 0;
   bottom: 0;
-  left: 139px;
 }
 .container p {
   font-size: 23px;
@@ -90,6 +89,24 @@ margin-bottom: 50px;
   text-decoration: none;
   opacity: .8;
 }
+#back-to-top  {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+#back-to-top a{
+  color: #333;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 /* Responsive Styling */
