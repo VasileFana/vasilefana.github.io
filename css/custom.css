@@ -3,28 +3,52 @@ body {
   padding-top: 50px;
   position: relative;
 }
+
 .navbar {
 background-color: #0099FF;
 }
+
 .col-md-4 .fa-circle {
   color:#33CC00;
 }
+
+#contact .fa-skype {
+  color: #33CCFF;
+}
+
+#contact .fa-mobile {
+  color: #33CC00;
+}
+
+#contact .fa-envelope {
+  color: #e74c3c;
+}
+
 .navbar-brand img {
   position: absolute;
   top: 0;
   bottom: 0;
 }
+
 .container p {
   font-size: 23px;
 }
 
 #jumbotron.jumbotron {
-  background-image: url("../images/Creating1.jpg");
-  height: calc(100vh - 50px); /* We have 50px because .navbar-collapse have 50px height */
-  min-height: 300px; /* Let's actually stop shrinking height at 300px */
-  box-sizing: border-box; /* This makes padding to not count in height */
-  background-size: cover; /* That's where magick happens. */
-  background-position: center;
+    background-image: url("../images/Creating1.jpg");
+    height: calc(100vh - 50px); /* We have 50px because .navbar-collapse have 50px height */
+    min-height: 300px; /* Let's actually stop shrinking height at 300px */
+    box-sizing: border-box; /* This makes padding to not count in height */
+    background-size: cover; /* That's where magick happens. */
+    background-position: center;
+    color: white;
+    text-align: center;
+  }
+
+#who img {
+ background-size: cover;
+  height: 100%;
+  width: 100%;
   color: white;
   text-align: center;
 }
@@ -32,24 +56,70 @@ background-color: #0099FF;
 ul.nav  {
   font-size: 13px;
 }
+
 footer {
+  position: relative;
   background-color: #0099FF;
   padding-top: 50px;
   padding-bottom: 30px;
 }
 
+footer img {
+
+  width: 20%;
+  height: 20%;
+  bottom: 40px;
+  left: 20px;
+}
+
+#github-profile a {
+  text-decoration: none;
+}
+
+#back-to-top {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+#back-to-top a{
+  color: #333;
+  text-decoration: none;
+}
+
+  #github-profile {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  }
+
+  #linkedin {
+  position: absolute;
+  left: 40px;
+  bottom: 70px;
+  }
+
+#linkedin a {
+  text-decoration: none;
+}
 
 .jumbotron h1 {
   margin-top: 0px;
 margin-bottom: 50px;
 }
+
 .jumbotron p {
   margin-bottom: 30px;
   font-weight: 100;
   padding: 0 50px;
 }
+
 #who p {
   color: #e74c3c;
+}
+
+#about-me .btn-default {
+  color: #33CC00;
 }
 
 .jumbotron h1, ul.nav {
@@ -61,53 +131,135 @@ margin-bottom: 50px;
 
 	font-size: 36px;
 }
+
 .homepage {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
 .homepage h2 {
   font-family: 'Arvo',courier,serif;
   color: #e74c3c;
   text-transform: uppercase;
 }
+
 .homepage h3 {
   font-family: 'Arvo',courier,serif;
   color: #e74c3c;
   text-transform: uppercase;
   font-size: 26px;
 }
+
+.homepage h4 {
+  font-family: 'Arvo',courier,serif;
+  color: #e74c3c;
+  text-transform: uppercase;
+}
+
 .homepage p {
   font-weight: 300;
   font-size: 21px;
 }
+
 .homepage a {
-  color: #e74c3c;
+  color: #282828;
 }
+
 .homepage hr {
   border-top: 1px solid #e74c3c;
   width: 160px;
   margin-top: 15px;
 }
+
 .homepage a:hover {
   color: #e74c3c;
   text-decoration: none;
   opacity: .8;
 }
-#back-to-top  {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+
+
+/* 3D view of #who+#jumbotron section the question mark */
+
+#who span:hover::before {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
 }
-#back-to-top a{
-  color: #333;
+
+#who span {
+    display: inline-block;
+    position: relative;
+    -webkit-transform: perspective(1000px) rotate3d(0,1,0,0deg);
+    transform: perspective(1000px) rotate3d(0,1,0,0deg);
+    -webkit-transition: -webkit-transform 0.5s, color 0.5s;
+    transition: transform 0.5s, color 0.5s;
 }
 
+#who:hover span {
+    -webkit-transform: perspective(1000px) rotate3d(0,1,0,360deg);
+    transform: perspective(1000px) rotate3d(0,1,0,360deg);
+}
 
+#jumbotron span:hover::before {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
 
+#jumbotron span {
+    display: inline-block;
+    position: relative;
+    -webkit-transform: perspective(1000px) rotate3d(0,1,0,0deg);
+    transform: perspective(1000px) rotate3d(0,1,0,0deg);
+    -webkit-transition: -webkit-transform 0.5s, color 0.5s;
+    transition: transform 0.5s, color 0.5s;
+}
 
+#jumbotron:hover span {
+    -webkit-transform: perspective(1000px) rotate3d(0,1,0,360deg);
+    transform: perspective(1000px) rotate3d(0,1,0,360deg);
+}
 
+ /* 3D view of #about-me section the spans */
 
+#about-me span:hover::before {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+#about-me span {
+    display: inline-block;
+    position: relative;
+    -webkit-transform: perspective(1000px) rotate3d(0,1,0,0deg);
+    transform: perspective(1000px) rotate3d(0,1,0,0deg);
+    -webkit-transition: -webkit-transform 0.5s, color 0.5s;
+    transition: transform 0.5s, color 0.5s;
+}
+
+#about-me:hover span {
+    -webkit-transform: perspective(1000px) rotate3d(0,1,0,360deg);
+    transform: perspective(1000px) rotate3d(0,1,0,360deg);
+}
+
+ /* 3D view of footer spans */
+
+ footer span:hover::before {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+footer span {
+    display: inline-block;
+    position: relative;
+    -webkit-transform: perspective(1000px) rotate3d(0,1,0,0deg);
+    transform: perspective(1000px) rotate3d(0,1,0,0deg);
+    -webkit-transition: -webkit-transform 0.5s, color 0.5s;
+    transition: transform 0.5s, color 0.5s;
+}
+
+footer:hover span {
+    -webkit-transform: perspective(1000px) rotate3d(0,1,0,360deg);
+    transform: perspective(1000px) rotate3d(0,1,0,360deg);
+}
 
 
 
@@ -120,6 +272,23 @@ margin-bottom: 50px;
   .jumbotron h1 {
     font-size: 56px;
     margin-bottom: 30px;
+  }
+
+  footer img {
+    width: 25%;
+    height: 25%;
+  }
+
+  #github-profile {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  }
+
+  #linkedin {
+  position: absolute;
+  left: 20px;
+  bottom: 70px;
   }
 }
 
@@ -134,6 +303,23 @@ margin-bottom: 50px;
   #get-involved .col-md-4 {
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+
+  footer img {
+    width: 30%;
+    height: 30%;
+  }
+
+   #github-profile {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  }
+
+  #linkedin {
+  position: absolute;
+  left: 20px;
+  bottom: 70px;
   }
 }
 
@@ -155,6 +341,19 @@ margin-bottom: 50px;
   }
 
   footer img {
-    width: 80%;
+    width: 40%;
+    height: 40%;
+  }
+
+  #github-profile {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  }
+
+  #linkedin {
+  position: absolute;
+  left: 20px;
+  bottom: 70px;
   }
 }
