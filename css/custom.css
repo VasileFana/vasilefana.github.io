@@ -35,7 +35,7 @@ background-color: #0099FF;
 }
 
 #jumbotron.jumbotron {
-    background-image: linear-gradient(rgb(52, 152, 219, 0.4), rgb(52, 152, 219, 0.4)), url("../images/Creating1.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("../images/Creating1.jpg");
     height: calc(100vh - 50px); /* We have 50px because .navbar-collapse have 50px height */
     min-height: 300px; /* Let's actually stop shrinking height at 300px */
     box-sizing: border-box; /* This makes padding to not count in height */
